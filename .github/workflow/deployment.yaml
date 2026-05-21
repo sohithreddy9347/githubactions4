@@ -5,16 +5,16 @@ on:
       - main
       - dev
       - release*
-    paths:
-      - 'src/**'
-  pull_request:
-    branches:
-      - main
-      - dev
-      - release*
-  workflow_dispatch:
-  schedule:
-      - cron: '0 9 * * *'
+  #   paths:
+  #     - 'src/**'
+  # pull_request:
+  #   branches:
+  #     - main
+  #     - dev
+  #     - release*
+  # workflow_dispatch:
+  # schedule:
+  #     - cron: '0 9 * * *'
 jobs:
   test:
       runs-on: ubuntu-latest
