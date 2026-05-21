@@ -50,7 +50,7 @@ jobs:
            with:
             name: dist-files
          - name: list files
-           run: ls -al dist
+           run: ls -ll
          - name: deploy
            run: echo "deploying" 
   
