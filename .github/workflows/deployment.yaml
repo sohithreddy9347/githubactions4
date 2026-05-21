@@ -39,7 +39,18 @@ jobs:
         - name: upload build artifact
           uses: actions/upload-artifact@v4
           with:
-            name: dest-files
+            name: dist-files
             path: dist
-
+  deploy:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+         - name: get-build-artifact
+           uses: actions/download-artifact@v4
+           with:
+            name: dist-files
+         - name: list files
+           run: ls -al dist
+         - name: deploy
+           run: echo "deploying" 
   
